@@ -1,0 +1,22 @@
+{
+  "name": "visualizacion-e-interfaces",
+  "version": "1.0.0",
+  "description": "TP final de la materia Visualización e Interfaces. UNLaM. Año: 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloValor/visualizacion-e-interfaces.git"
+  },
+  "author": "Pablo Valor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PabloValor/visualizacion-e-interfaces/issues"
+  },
+  "homepage": "https://github.com/PabloValor/visualizacion-e-interfaces#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
