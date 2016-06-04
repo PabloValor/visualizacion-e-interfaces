@@ -1,0 +1,25 @@
+{
+  "name": "visualizacion-e-interfaces",
+  "homepage": "https://github.com/PabloValor/visualizacion-e-interfaces",
+  "authors": [
+    "Pablo Valor <pablovalor89@gmail.com>"
+  ],
+  "description": "TP Final de la materia Visualización e Interfaces. UnLaM. Año 2016",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6",
+    "wow": "^1.1.2"
+  }
+}
