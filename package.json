@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/PabloValor/visualizacion-e-interfaces#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-webserver": "^0.9.1"
   }
 }
