@@ -39,12 +39,15 @@ var Layout = function() {
 	function cargarEventos() {
 		// particlesground
 		$('header').particleground({
-			dotColor: '#CCC',
-			lineColor: '#CCC',
+			dotColor: '#747474',
+			lineColor: '#515151',
 			directionX: 'up',
 			directionY: 'up',
 			density: 10000
 		});
+
+		// menu mobile
+    	$(".button-collapse").sideNav();
 	}
 };
 $(document).on('ready', function() {

@@ -38,7 +38,11 @@ header .contenido {
   text-align: center;
   width: 100%;
 }
-.seccion-1 {
+.section-1 {
   background: #CCC;
+  min-height: 400px;
+}
+.section-2 {
+  background: navy;
   min-height: 400px;
 }
