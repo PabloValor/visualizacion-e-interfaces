@@ -5,12 +5,15 @@ var gulp 			= require('gulp'),
     livereload 		= require('gulp-livereload');
 
 var paths = {
+	html: '**/*.html',
 	css: {
 		src: 'assets/css/',
 		dist: 'assets/css/dist/'
 	},
 	js: {
 		src: 'assets/js/',
+		components: 'assets/js/components',
+		vendor: 'assets/js/vendor/',
 		dist: 'assets/js/dist/'
 	},
 	bower: {
@@ -42,7 +45,9 @@ gulp.task('js', function() {
 	var sources = [
 		paths.bower.jquery,
 		paths.bower.materialize.js,
-		paths.js.src + 'main.js'
+		paths.js.vendor + '*.js',
+		paths.js.components + '**/*.js',
+		paths.js.src + 'init.js'
 	];
 
 	gulp.src(sources)
@@ -55,6 +60,7 @@ gulp.task('watch', function() {
 	livereload.listen();
 	gulp.watch(paths.css.src + '**/*.less', ['less']);
 	gulp.watch(paths.js.src + '*.js', ['js']);
+	gulp.watch(paths.html, ['default']);
 });
 
 gulp.task('default', ['less', 'js','webserver', 'watch']);
