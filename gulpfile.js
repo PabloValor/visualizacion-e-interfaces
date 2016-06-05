@@ -5,7 +5,6 @@ var gulp 			= require('gulp'),
     livereload 		= require('gulp-livereload');
 
 var paths = {
-	html: '**/*.html',
 	css: {
 		src: 'assets/css/',
 		dist: 'assets/css/dist/'
@@ -60,7 +59,6 @@ gulp.task('watch', function() {
 	livereload.listen();
 	gulp.watch(paths.css.src + '**/*.less', ['less']);
 	gulp.watch(paths.js.src + '*.js', ['js']);
-	gulp.watch(paths.html, ['default']);
 });
 
 gulp.task('default', ['less', 'js','webserver', 'watch']);
