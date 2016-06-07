@@ -52,7 +52,7 @@ gulp.task('js', function() {
 
 	gulp.src(sources)
 	.pipe(concatFiles('main.js'))
-	//.pipe(uglify())
+	.pipe(uglify())
     .pipe(gulp.dest(paths.js.dist))
     .pipe(livereload({port: 35728}));
 });

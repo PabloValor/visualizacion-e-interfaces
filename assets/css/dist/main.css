@@ -23,20 +23,27 @@ section {
   padding-bottom: 30px;
 }
 header {
-  background: url(../../img/tigre.jpg);
+  background: url(../../img/bg-sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
   min-height: 800px;
   text-transform: uppercase;
   position: relative;
 }
 header .contenido {
+  color: white;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   text-align: center;
   width: 100%;
+}
+header .contenido h1 {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 15px;
 }
 .section-1 {
   background: #CCC;

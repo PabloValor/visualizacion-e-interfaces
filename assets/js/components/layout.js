@@ -12,11 +12,12 @@ var Layout = function() {
 
 		// particlesground
 		$header.particleground({
-			dotColor: '#747474',
-			lineColor: '#515151',
+			dotColor: 'white',
+			lineColor: '#F1F1F1',
 			directionX: 'up',
 			directionY: 'up',
-			density: 10000
+			density: 10000,
+			particleRadius: 5
 		});
 
 		// menu mobile
