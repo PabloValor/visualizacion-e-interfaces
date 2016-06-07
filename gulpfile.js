@@ -2,7 +2,8 @@ var gulp 			= require('gulp'),
 	less 			= require('gulp-less'),
 	concatFiles 	= require('gulp-concat'),
 	webserver 		= require('gulp-webserver'),
-    livereload 		= require('gulp-livereload');
+    livereload 		= require('gulp-livereload'),
+    uglify 			= require('gulp-uglify');
 
 var paths = {
 	css: {
@@ -51,6 +52,7 @@ gulp.task('js', function() {
 
 	gulp.src(sources)
 	.pipe(concatFiles('main.js'))
+	//.pipe(uglify())
     .pipe(gulp.dest(paths.js.dist))
     .pipe(livereload({port: 35728}));
 });
@@ -58,7 +60,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
 	livereload.listen();
 	gulp.watch(paths.css.src + '**/*.less', ['less']);
-	gulp.watch(paths.js.src + '*.js', ['js']);
+	gulp.watch([paths.js.src + '**/*.js', '!' + paths.js.dist + '*.js'], ['js']);
 });
 
 gulp.task('default', ['less', 'js','webserver', 'watch']);

@@ -37,8 +37,13 @@ var Layout = function() {
 	};
 
 	function cargarEventos() {
+		var $header = $('header');
+		var $window = $(window);
+		// header
+		$header.height($window.height()- 64);
+
 		// particlesground
-		$('header').particleground({
+		$header.particleground({
 			dotColor: '#747474',
 			lineColor: '#515151',
 			directionX: 'up',
