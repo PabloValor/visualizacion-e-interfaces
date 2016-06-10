@@ -8,7 +8,7 @@ var Layout = function() {
 		var $header = $('header');
 		var $window = $(window);
 		// header
-		$header.height($window.height()- 64);
+		$header.height($window.height() - 64);
 
 		// particlesground
 		$header.particleground({

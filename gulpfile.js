@@ -3,6 +3,7 @@ var gulp 			= require('gulp'),
 	concatFiles 	= require('gulp-concat'),
 	webserver 		= require('gulp-webserver'),
     livereload 		= require('gulp-livereload'),
+    cssmin 			= require('gulp-cssmin'),
     uglify 			= require('gulp-uglify');
 
 var paths = {
@@ -37,6 +38,7 @@ gulp.task('webserver', function() {
 gulp.task('less', function() {
 	gulp.src(paths.css.src + 'main.less')
     .pipe(less())
+    .pipe(cssmin({ keepSpecialComments: 0 }))
     .pipe(gulp.dest(paths.css.dist))
     .pipe(livereload({port: 35728}));
 });
