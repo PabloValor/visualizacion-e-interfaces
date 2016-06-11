@@ -1,4 +1,5 @@
 // materialize overrides
+@import '../01-variables/main.less';
 
 .navbar-fixed {
 	position: fixed;
@@ -9,4 +10,8 @@ nav {
 	.nav-wrapper {
 		padding: 0 20px;
 	}
+}
+
+.btn-large:hover, .btn:hover {
+	background: @dark-gray;
 }
