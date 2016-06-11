@@ -7,8 +7,9 @@ var Layout = function() {
 	function cargarEventos() {
 		var $header = $('header');
 		var $window = $(window);
+		var $nav = $('nav');
 		// header
-		$header.height($window.height() - 64);
+		$header.height($window.height());
 
 		// particlesground
 		$header.particleground({
@@ -22,5 +23,18 @@ var Layout = function() {
 
 		// menu mobile
     	$(".button-collapse").sideNav();
+
+    	// scroll nav color
+    	$window.scroll(function() {
+    		if($window.scrollTop() > $header.height()) {
+    			bgColorNav($nav, true);
+    		} else {
+    			bgColorNav($nav, false);
+    		}
+    	});
+	}
+
+	function bgColorNav($nav, show) {
+		$nav.css({ background: show ? 'black' : 'transparent' });
 	}
 };
