@@ -1,3 +1,5 @@
+@import '../01-variables/main.less';
+
 header {
 	background: url(../../img/bg-sky.jpg);
 	background-repeat: no-repeat;
@@ -23,12 +25,22 @@ header {
 }
 
 .section-1 {
-	background: #CCC;
+	background: @gray;
 	min-height: 400px;
 }
 .section-2 {
-	background: navy;
 	min-height: 400px;
+}
+.section-3 {
+	background-color: #CCC;
+}
+.section-4 {
+	color: white;
+	background-color: @light-blue;
+}
+.section-5 {
+	color: white;
+	background-color: @dark-gray;
 }
 
 .mouse {
@@ -54,4 +66,8 @@ header {
 			animation: 1.6s ease infinite wheel-up-down;
 		}		
 	}
+}
+footer {
+	background: black;
+	color: #CCC;
 }
