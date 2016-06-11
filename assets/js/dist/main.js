@@ -33,13 +33,17 @@ function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.reque
 var Layout = function() {
 	'use strict';
 	this.cargar = function() {
-		cargarEventos();
+		var $header 		= $('header'),
+			$window 		= $(window),
+			$nav 			= $('nav');
+
+		cargarSettings($window, $header);
+		cargarEventos($window, $header, $nav);
 	};
 
-	function cargarEventos() {
-		var $header = $('header');
-		var $window = $(window);
-		var $nav = $('nav');
+	function cargarSettings($window, $header) {
+		var $buttonCollapse = $('.button-collapse');
+		
 		// header
 		$header.height($window.height());
 
@@ -54,16 +58,22 @@ var Layout = function() {
 		});
 
 		// menu mobile
-    	$(".button-collapse").sideNav();
+		$buttonCollapse.sideNav();
 
+	}
+	function cargarEventos($window, $header, $nav) {
     	// scroll nav color
     	$window.scroll(function() {
-    		if($window.scrollTop() > $header.height()) {
-    			bgColorNav($nav, true);
-    		} else {
-    			bgColorNav($nav, false);
-    		}
+    		changeNavColor($window, $header, $nav);
     	});
+	}
+
+	function changeNavColor($window, $header, $nav) {
+		if($window.scrollTop() > $header.height()) {
+			bgColorNav($nav, true);
+			} else {
+			bgColorNav($nav, false);
+		}		
 	}
 
 	function bgColorNav($nav, show) {
