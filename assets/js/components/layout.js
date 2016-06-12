@@ -37,7 +37,7 @@ var Layout = function() {
 	}
 
 	function changeNavColor($window, $header, $nav) {
-		if($window.scrollTop() > $header.height()) {
+		if($window.scrollTop() > $header.height() - 64) {
 			bgColorNav($nav, true);
 			} else {
 			bgColorNav($nav, false);
