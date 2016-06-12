@@ -1,5 +1,6 @@
 @import '../01-variables/main.less';
 body {
+	color: @dark-gray;
 	font-size: 20px;
 }
 p, li {
@@ -12,12 +13,23 @@ section {
 		font-size: 1.5em;
 		text-align: center;
 		margin: 0;
+		&::after {
+			content: '';
+			width: 80px;
+			display: block;
+			background: #fff;
+			height: 5px;
+			margin: 20px auto;
+			line-height: 1.1;
+		}	
 	}
 	.title {
 		margin-bottom: 20px;
 	}
 	.body {
-
+		.btn {
+			margin-top: 30px;
+		}
 	}
 }
 .button- {
