@@ -16,14 +16,14 @@ var Layout = function() {
 		$header.height($window.height());
 
 		// particlesground
-		/*$header.particleground({
-			dotColor: 'white',
-			lineColor: '#F1F1F1',
+		$header.particleground({
+			dotColor: 'ghostwhite',
+			lineColor: 'gray',
 			directionX: 'up',
 			directionY: 'up',
 			density: 10000,
 			particleRadius: 5
-		});*/
+		});
 
 		// menu mobile
 		$buttonCollapse.sideNav();
