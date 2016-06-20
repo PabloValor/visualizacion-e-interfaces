@@ -2,7 +2,8 @@ $(document).on('ready', function() {
 	'use strict';
 	var layout = new Layout();
 	layout.cargar();
-
+	new WOW().init();
+	
 	// TODO: Separar en modulo Home
 	$('.timer').countTo();
 	$('#video').YTPlayer({

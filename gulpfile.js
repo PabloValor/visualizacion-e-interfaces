@@ -21,6 +21,7 @@ var paths = {
 		materialize: {
 			js: 'bower_components/Materialize/dist/js/materialize.min.js'
 		},
+		wow: 'bower_components/wow/dist/wow.min.js',
 		youtubeAPI: 'bower_components/youtubeBackground/src/jquery.youtubebackground.js',
 		jquery: 'bower_components/jquery/dist/jquery.min.js'
 	}
@@ -49,6 +50,7 @@ gulp.task('js', function() {
 		paths.bower.jquery,
 		paths.bower.materialize.js,
 		paths.bower.youtubeAPI,
+		paths.bower.wow,
 		paths.js.vendor + '*.js',
 		paths.js.components + '**/*.js',
 		paths.js.src + 'init.js'
