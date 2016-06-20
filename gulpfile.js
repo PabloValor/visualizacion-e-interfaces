@@ -21,6 +21,7 @@ var paths = {
 		materialize: {
 			js: 'bower_components/Materialize/dist/js/materialize.min.js'
 		},
+		youtubeAPI: 'bower_components/youtubeBackground/src/jquery.youtubebackground.js',
 		jquery: 'bower_components/jquery/dist/jquery.min.js'
 	}
 };
@@ -47,6 +48,7 @@ gulp.task('js', function() {
 	var sources = [
 		paths.bower.jquery,
 		paths.bower.materialize.js,
+		paths.bower.youtubeAPI,
 		paths.js.vendor + '*.js',
 		paths.js.components + '**/*.js',
 		paths.js.src + 'init.js'

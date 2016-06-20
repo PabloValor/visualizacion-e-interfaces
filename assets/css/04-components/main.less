@@ -74,9 +74,28 @@ header {
 	}
 }
 .section-video {
-	background: @gray;
-	video {
+	height: 300px;
+	color: white;
+	&#video{
+	 position: relative;
+	 background: rgba(0, 0, 0, 0.5)
+	}
+	.ytplayer-container{
+	 position: absolute;
+	 top: 0;
+	 z-index: -1;
+	}
+	.table {
+		display: table;
+		height: 100%;
 		width: 100%;
+	}
+	.row {
+		display: table-row;
+	}
+	.cell {
+		display: table-cell;
+		vertical-align: middle;
 	}
 }
 .section-5 {
