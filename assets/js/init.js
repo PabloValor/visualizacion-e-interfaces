@@ -5,7 +5,6 @@ $(document).on('ready', function() {
 	new WOW().init();
 	
 	// TODO: Separar en modulo Home
-	$('.timer').countTo();
 	$('#video').YTPlayer({
 	    fitToBackground: true,
 	    videoId: 'YJg02ivYzSs',

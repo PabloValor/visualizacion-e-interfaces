@@ -3,10 +3,11 @@ var Layout = function() {
 	this.cargar = function() {
 		var $header 		= $('header'),
 			$window 		= $(window),
-			$nav 			= $('nav');
+			$nav 			= $('nav'),
+			CounterFlag		= true;
 
 		cargarSettings($window, $header);
-		cargarEventos($window, $header, $nav);
+		cargarEventos($window, $header, $nav, CounterFlag);
 	};
 
 	function cargarSettings($window, $header) {
@@ -30,10 +31,17 @@ var Layout = function() {
 		$buttonCollapse.sideNav();
 
 	}
-	function cargarEventos($window, $header, $nav) {
+	function cargarEventos($window, $header, $nav, CounterFlag) {
     	// scroll nav color
     	$window.scroll(function() {
     		changeNavColor($window, $header, $nav);
+			
+    		// TODO: Refactor
+			var scrollPosition = scrollY || pageYOffset;
+			if (scrollPosition > $("#counter").position().top - $window.height() && CounterFlag) {
+				CounterFlag = false;
+				$('.timer').countTo();
+			}    		
     	});
 	}
 

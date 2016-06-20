@@ -18,12 +18,12 @@ var paths = {
 		dist: 'assets/js/dist/'
 	},
 	bower: {
+		jquery: 'bower_components/jquery/dist/jquery.min.js',
 		materialize: {
 			js: 'bower_components/Materialize/dist/js/materialize.min.js'
 		},
 		wow: 'bower_components/wow/dist/wow.min.js',
-		youtubeAPI: 'bower_components/youtubeBackground/src/jquery.youtubebackground.js',
-		jquery: 'bower_components/jquery/dist/jquery.min.js'
+		youtubeAPI: 'bower_components/youtubeBackground/src/jquery.youtubebackground.js'
 	}
 };
 
