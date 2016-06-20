@@ -53,7 +53,7 @@ gulp.task('js', function() {
 	];
 
 	gulp.src(sources)
-	.pipe(concatFiles('main.js'))
+	.pipe(concatFiles('main.min.js'))
 	.pipe(uglify())
     .pipe(gulp.dest(paths.js.dist))
     .pipe(livereload({port: 35728}));

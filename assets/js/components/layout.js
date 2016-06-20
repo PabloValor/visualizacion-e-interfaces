@@ -19,10 +19,11 @@ var Layout = function() {
 		$header.particleground({
 			dotColor: 'ghostwhite',
 			lineColor: 'gray',
-			directionX: 'up',
-			directionY: 'up',
+			directionX: 'center',
+			directionY: 'center',
 			density: 10000,
-			particleRadius: 5
+			particleRadius: 4,
+			lineWidth: .5
 		});
 
 		// menu mobile
