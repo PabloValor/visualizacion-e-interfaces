@@ -5,8 +5,19 @@ $(document).on('ready', function() {
 	new WOW().init();
 	
 	// TODO: Separar en modulo Home
-	$("#owl-example").owlCarousel();
+	$("#owl-example").owlCarousel({
+      autoPlay: 3000,
+      items : 5
+	});
 	
+	$("#owl-testimonial").owlCarousel({
+	navigation : true,
+	slideSpeed : 300,
+	paginationSpeed : 400,
+	singleItem:true,
+	navigation: false
+	});	
+
 	$('#video').YTPlayer({
 	    fitToBackground: true,
 	    videoId: 'YJg02ivYzSs',
