@@ -5,6 +5,8 @@ $(document).on('ready', function() {
 	new WOW().init();
 	
 	// TODO: Separar en modulo Home
+	$("#owl-example").owlCarousel();
+	
 	$('#video').YTPlayer({
 	    fitToBackground: true,
 	    videoId: 'YJg02ivYzSs',
