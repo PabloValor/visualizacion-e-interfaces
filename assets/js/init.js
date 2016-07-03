@@ -7,7 +7,7 @@ $(document).on('ready', function() {
 	// TODO: Separar en modulo Home
 	$("#owl-example").owlCarousel({
       autoPlay: 3000,
-      items : 5
+      items : 4
 	});
 	
 	$("#owl-testimonial").owlCarousel({
