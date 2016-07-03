@@ -32,6 +32,9 @@ var Layout = function() {
 
 	}
 	function cargarEventos($window, $header, $nav, CounterFlag) {
+		if(isContactPage()) {
+			bgColorNav($nav, true);
+		}
     	// scroll nav color
     	$window.scroll(function() {
     		changeNavColor($window, $header, $nav);
@@ -57,5 +60,9 @@ var Layout = function() {
 		$nav.css({ 
 			background: show ? '#2B373A' : 'transparent'
 		});
+	}
+
+	function isContactPage() {
+		return window.location.pathname.includes('contacto');
 	}
 };
